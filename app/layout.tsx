@@ -20,6 +20,8 @@ const interTight = Inter_Tight({
   weight: ["400", "500", "600", "700"],
 });
 
+const ogImage = "https://roreh5lk1snxf5gg.public.blob.vercel-storage.com/images/sisimaro-og.webp";
+
 export const metadata: Metadata = {
   title: "Sisimaro - Your Personal AI Pal at Work",
   description:
@@ -27,14 +29,7 @@ export const metadata: Metadata = {
   keywords: ["AI", "workplace", "productivity", "enterprise", "assistant", "chat"],
   openGraph: {
     title: "Sisimaro - Your Personal AI Pal at Work",
-    images: [
-      {
-        url: "https://roreh5lk1snxf5gg.public.blob.vercel-storage.com/images/sisimaro-og.webp",
-        width: 1200,
-        height: 630,
-        alt: "Sisimaro - Your Personal AI Pal at Work",
-      },
-    ],
+    images: [ogImage],
     description:
       "Sisimaro turns corporate mess into magic: one friendly chat for knowledge, research, access, and decisions that actually work.",
     type: "website",
