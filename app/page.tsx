@@ -1,65 +1,292 @@
+import Navbar from "./components/Navbar";
 import Image from "next/image";
+import { Briefcase, Mic, MessageCircle, Clock, Lightbulb, ShieldCheck, ArrowRight, ArrowUpRight } from "lucide-react";
+import { TeamsIcon, SlackIcon } from "./components/icons";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6">
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light mb-8">
+            <span className="text-sm text-gray-700 dark:text-gray-300">
+              Coming soon to 
+
+            </span>
+            <div className="flex items-center gap-2">
+              <TeamsIcon />
+              <SlackIcon />
+            </div>
+          </div>
+
+          <span className="text-4xl inline-flex font-heading md:text-6xl lg:text-7xl text-gray-900 dark:text-white leading-tight -tracking-widest">
+            Your Personal AI Pal at Work
+          </span>
+
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+            Sisimaro turns corporate mess into magic: one friendly chat for
+            knowledge, research, access, and decisions that actually work.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="w-full flex items-center justify-center gap-2 cursor-pointer sm:w-auto bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-2xl font-medium font-heading transition-colors">
+              Join the Waitlist
+              <div className="">
+                <ArrowUpRight className="w-6 h-6" />
+              </div>
+            </button>
+          </div>
+        </div>
+
+        {/* Hero Visual */}
+        <div className="max-w-5xl mx-auto mt-16 md:mt-24">
+          <div className="relative bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden min-h-[400px] p-6 md:p-10">
+            {/* Add your images or videos here */}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section id="features" className="py-20 md:py-32 px-6 bg-gray-50 dark:bg-gray-800/40">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white mb-4">
+              Not just another chatbot
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Sisimaro is the cheeky, reliable teammate every employee needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Feature 1 */}
+            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
+                <Briefcase className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Unified Knowledge
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Transform fragmented company data into instant, accurate answers.
+                No more digging through silos or chasing down information.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
+                <Mic className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Integrated Meeting Notetaker
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                All meeting recordings and notes are automatically captured and
+                updated to your team&apos;s knowledge base. Never miss a decision or insight.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
+                <MessageCircle className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Natural Conversations
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Unlike other chatbots, sisimaro&apos;s responses are more natural,
+                playful, and friendly. Chat like you would with a real teammate.
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
+                <Clock className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Decision Memory
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Recalls every decision, context, and outcome. Never lose track of
+                what was decided and why.
+              </p>
+            </div>
+
+            {/* Feature 5 */}
+            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
+                <Lightbulb className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Smart Research
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Brainstorm, research, or complete tasks—all in one place. No need
+                to juggle between other chatbots.
+              </p>
+            </div>
+
+            {/* Feature 6 */}
+            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
+                <ShieldCheck className="w-6 h-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Enterprise-Grade
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Playful vibes meet serious security. Built for scale with the
+                reliability your business demands.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-20 md:py-32 px-6 bg-white dark:bg-[#0a0a0a]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white mb-4">
+              How{" "}
+              <span className="font-special text-primary">sisimaro</span>{" "}
+              works
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+              Getting started is simple. No complex setup, no learning curve.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {/* Step 1 */}
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary text-white font-bold text-2xl flex items-center justify-center mx-auto mb-6 font-heading">
+                1
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Connect Your Tools
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Link your existing workplace tools and data sources. Sisimaro
+                integrates seamlessly with what you already use.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary text-white font-bold text-2xl flex items-center justify-center mx-auto mb-6 font-heading">
+                2
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Ask Naturally
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Just chat like you would with a colleague. Ask questions, request
+                information, or get help with decisions.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary text-white font-bold text-2xl flex items-center justify-center mx-auto mb-6 font-heading">
+                3
+              </div>
+              <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
+                Get Things Done
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Receive instant, accurate answers with full context. Make better
+                decisions faster, without the hassle.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white mb-6">
+            Ready to meet your new{" "}
+            <span className="font-special text-primary">work pal</span>?
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-10 max-w-xl mx-auto">
+            Join the waitlist and be among the first to experience a friendlier
+            way to work with AI.
+          </p>
+
+          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your work email"
+              className="flex-1 px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+            />
+            <button
+              type="submit"
+              className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-medium font-heading transition-colors whitespace-nowrap"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              Get Early Access
+            </button>
+          </form>
+
+          <p className="text-sm text-gray-500 dark:text-gray-500 mt-4">
+            No spam, ever. We&apos;ll only reach out when we&apos;re ready for you.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Footer */}
+      <footer id="contact" className="py-12 px-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
+                <Image
+                  src="/logo.svg"
+                  alt="sisimaro logo"
+                  width={101}
+                  height={26}
+                  className="h-6 w-auto"
+                />
+              </div>
+              <span className="font-heading font-bold text-xl text-gray-900 dark:text-white">
+                <Image
+                  src="/logo.svg"
+                  alt="sisimaro logo"
+                  width={101}
+                  height={26}
+                  className="h-6 w-auto"
+                />
+              </span>
+            </div>
+
+            <div className="flex items-center gap-8 text-sm text-gray-600 dark:text-gray-400">
+              <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                Privacy
+              </a>
+              <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
+                Terms
+              </a>
+              <a
+                href="mailto:hello@sisimaro.com"
+                className="hover:text-gray-900 dark:hover:text-white transition-colors"
+              >
+                Contact
+              </a>
+            </div>
+
+            <p className="text-sm text-gray-500 dark:text-gray-500">
+              Built with care
+            </p>
+          </div>
         </div>
-      </main>
+      </footer>
     </div>
   );
 }
