@@ -1,6 +1,7 @@
 "use client";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Image from "next/image";
 import { Briefcase, Mic, MessageCircle, Clock, Lightbulb, ShieldCheck, ArrowRight, ArrowUpRight } from "lucide-react";
 import { TeamsIcon, SlackIcon } from "./components/icons";
@@ -244,52 +245,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer id="contact" className="py-12 px-6 bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-                <Image
-                  src="/logo.svg"
-                  alt="Sisimaro logo"
-                  width={101}
-                  height={26}
-                  className="h-6 w-auto"
-                />
-              </div>
-              <span className="font-heading font-bold text-xl text-gray-900 dark:text-white">
-                <Image
-                  src="/logo.svg"
-                  alt="Sisimaro logo"
-                  width={101}
-                  height={26}
-                  className="h-6 w-auto"
-                />
-              </span>
-            </div>
-
-            <div className="flex items-center gap-8 text-sm text-gray-600 dark:text-gray-400">
-              <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                Privacy
-              </a>
-              <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">
-                Terms
-              </a>
-              <a
-                href="mailto:hello@sisimaro.com"
-                className="hover:text-gray-900 dark:hover:text-white transition-colors"
-              >
-                Contact
-              </a>
-            </div>
-
-            <p className="text-sm text-gray-500 dark:text-gray-500">
-              Built with care
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

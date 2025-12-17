@@ -40,16 +40,16 @@ export default function Navbar() {
         scrolled ? "w-[70%] max-w-4xl" : "w-[95%] max-w-6xl"
       }`}
     >
-      <div className="bg-white/70 dark:bg-[#0a0a0a]/70 backdrop-blur-xl border border-gray-200/50 dark:border-gray-700/50 rounded-xl px-6 py-3 flex items-center justify-between shadow-lg shadow-black/5">
+      <div className="bg-white/40 dark:bg-white/5 backdrop-blur-2xl backdrop-saturate-150 border border-gray-200/80 dark:border-white/10 rounded-2xl px-6 py-3 flex items-center justify-between dark:shadow-black/30">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <Image
-              src="/logo.svg"
+              src="/short-logo.png"
               alt="Sisimaro logo"
-              width={101}
-              height={26}
-              className="h-6 w-auto"
+              width={30}
+              height={30}
             />
+            <span className="text-3xl hidden md:block font-bold font-heading text-primary transition-colors -tracking-[0.04em]">Sisimaro</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <a
