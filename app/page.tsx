@@ -1,9 +1,14 @@
+"use client";
+
 import Navbar from "./components/Navbar";
 import Image from "next/image";
 import { Briefcase, Mic, MessageCircle, Clock, Lightbulb, ShieldCheck, ArrowRight, ArrowUpRight } from "lucide-react";
 import { TeamsIcon, SlackIcon } from "./components/icons";
 
 export default function Home() {
+  const handleWaitlistClick = () => {
+    window.open("https://tally.so/r/BzKKL4", "_blank");
+  };
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a]">
       <Navbar />
@@ -32,7 +37,10 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full flex items-center justify-center gap-2 cursor-pointer sm:w-auto bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-2xl font-medium font-heading transition-colors">
+            <button 
+              onClick={handleWaitlistClick}
+              className="w-full flex items-center justify-center gap-2 cursor-pointer sm:w-auto bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-2xl font-medium font-heading transition-colors"
+            >
               Join the Waitlist
               <div className="">
                 <ArrowUpRight className="w-6 h-6" />
@@ -221,19 +229,14 @@ export default function Home() {
             way to work with AI.
           </p>
 
-          <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your work email"
-              className="flex-1 px-5 py-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
+          <div className="flex justify-center">
             <button
-              type="submit"
+              onClick={handleWaitlistClick}
               className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-medium font-heading transition-colors whitespace-nowrap"
             >
               Get Early Access
             </button>
-          </form>
+          </div>
 
           <p className="text-sm text-gray-500 dark:text-gray-500 mt-4">
             No spam, ever. We&apos;ll only reach out when we&apos;re ready for you.
