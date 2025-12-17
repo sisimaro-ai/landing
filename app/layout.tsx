@@ -21,12 +21,20 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "sisimaro - Your Personal AI Pal at Work",
+  title: "Sisimaro - Your Personal AI Pal at Work",
   description:
     "Sisimaro turns corporate mess into magic: one friendly chat for knowledge, research, access, and decisions that actually work.",
   keywords: ["AI", "workplace", "productivity", "enterprise", "assistant", "chat"],
   openGraph: {
-    title: "sisimaro - Your Personal AI Pal at Work",
+    title: "Sisimaro - Your Personal AI Pal at Work",
+    images: [
+      {
+        url: "https://roreh5lk1snxf5gg.public.blob.vercel-storage.com/images/sisimaro-og.webp",
+        width: 1200,
+        height: 630,
+        alt: "Sisimaro - Your Personal AI Pal at Work",
+      },
+    ],
     description:
       "Sisimaro turns corporate mess into magic: one friendly chat for knowledge, research, access, and decisions that actually work.",
     type: "website",

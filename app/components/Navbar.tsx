@@ -45,7 +45,7 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <Image
               src="/logo.svg"
-              alt="sisimaro logo"
+              alt="Sisimaro logo"
               width={101}
               height={26}
               className="h-6 w-auto"

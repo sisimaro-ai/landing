@@ -99,7 +99,7 @@ export default function Home() {
                 Natural Conversations
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Unlike other chatbots, sisimaro&apos;s responses are more natural,
+                Unlike other chatbots, Sisimaro&apos;s responses are more natural,
                 playful, and friendly. Chat like you would with a real teammate.
               </p>
             </div>
@@ -155,7 +155,7 @@ export default function Home() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white mb-4">
               How{" "}
-              <span className="font-special text-primary">sisimaro</span>{" "}
+              <span className="font-special text-primary">Sisimaro</span>{" "}
               works
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-32 px-6 bg-gradient-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5">
+      <section className="py-20 md:py-32 px-6 bg-linear-to-b from-primary/5 to-primary/10 dark:from-primary/10 dark:to-primary/5">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-gray-900 dark:text-white mb-6">
             Ready to meet your new{" "}
@@ -249,7 +249,7 @@ export default function Home() {
               <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
                 <Image
                   src="/logo.svg"
-                  alt="sisimaro logo"
+                  alt="Sisimaro logo"
                   width={101}
                   height={26}
                   className="h-6 w-auto"
@@ -258,7 +258,7 @@ export default function Home() {
               <span className="font-heading font-bold text-xl text-gray-900 dark:text-white">
                 <Image
                   src="/logo.svg"
-                  alt="sisimaro logo"
+                  alt="Sisimaro logo"
                   width={101}
                   height={26}
                   className="h-6 w-auto"
