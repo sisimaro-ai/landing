@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Image from "next/image";
 import { Briefcase, Mic, MessageCircle, Clock, Lightbulb, ShieldCheck, ArrowRight, ArrowUpRight } from "lucide-react";
 import { TeamsIcon, SlackIcon } from "./components/icons";
+import heroImage from "./assets/images/heroimage.png";
 
 export default function Home() {
   const handleWaitlistClick = () => {
@@ -15,7 +16,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6">
+      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-6 flex flex-col items-center justify-center gap-40">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center">
           <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light mb-8">
             <span className="text-sm text-gray-700 dark:text-gray-300">
@@ -32,7 +33,7 @@ export default function Home() {
             Your Personal AI Pal at Work
           </span>
 
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-5">
             Sisimaro turns corporate mess into magic: one friendly chat for
             knowledge, research, access, and decisions that actually work.
           </p>
@@ -40,21 +41,25 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button 
               onClick={handleWaitlistClick}
-              className="w-full flex items-center justify-center gap-2 cursor-pointer sm:w-auto bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-2xl font-medium font-heading transition-colors"
+              className="group w-full flex items-center justify-center gap-2 cursor-pointer sm:w-auto bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-2xl font-medium font-heading transition-colors"
             >
               Join the Waitlist
               <div className="">
-                <ArrowUpRight className="w-6 h-6" />
+                <ArrowRight className="w-6 h-6 group-hover:-rotate-45 transition-transform duration-300" />
               </div>
             </button>
           </div>
         </div>
 
         {/* Hero Visual */}
-        <div className="max-w-5xl mx-auto mt-16 md:mt-24">
-          <div className="relative bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden min-h-[400px] p-6 md:p-10">
-            {/* Add your images or videos here */}
-          </div>
+        <div className="max-w-5xl flex items-center justify-center mx-auto">
+          <Image
+            src={heroImage}
+            alt="Sisimaro product preview"
+            width={700}
+            height={700}
+            className="object-contain object-center scale-125 md:scale-150"
+          />
         </div>
       </section>
 
