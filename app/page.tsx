@@ -3,7 +3,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Image from "next/image";
-import { Briefcase, Mic, MessageCircle, Clock, Lightbulb, ShieldCheck, ArrowRight, ArrowUpRight } from "lucide-react";
+import { Briefcase, Mic, MessageCircle, Clock, Lightbulb, ShieldCheck, ArrowRight } from "lucide-react";
 import { TeamsIcon, SlackIcon } from "./components/icons";
 import heroImage from "./assets/images/heroimage.png";
 
@@ -77,10 +77,14 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Feature 1 */}
-            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
-                <Briefcase className="w-6 h-6 text-primary" />
-              </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/70 dark:bg-gray-900/60 backdrop-blur-xl p-8 transition-all duration-300">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-70 dark:opacity-40 pointer-events-none" />
+
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 ring-1 ring-primary/15 flex items-center justify-center mb-6">
+                  <Briefcase className="w-6 h-6 text-primary" />
+                </div>
               <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
                 Unified Knowledge
               </h3>
@@ -88,13 +92,18 @@ export default function Home() {
                 Transform fragmented company data into instant, accurate answers.
                 No more digging through silos or chasing down information.
               </p>
+              </div>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
-                <Mic className="w-6 h-6 text-primary" />
-              </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/70 dark:bg-gray-900/60 backdrop-blur-xl p-8 transition-all duration-300">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-70 dark:opacity-40 pointer-events-none" />
+
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 ring-1 ring-primary/15 flex items-center justify-center mb-6">
+                  <Mic className="w-6 h-6 text-primary" />
+                </div>
               <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
                 Integrated Meeting Notetaker
               </h3>
@@ -102,13 +111,18 @@ export default function Home() {
                 All meeting recordings and notes are automatically captured and
                 updated to your team&apos;s knowledge base. Never miss a decision or insight.
               </p>
+              </div>
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
-                <MessageCircle className="w-6 h-6 text-primary" />
-              </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/70 dark:bg-gray-900/60 backdrop-blur-xl p-8 transition-all duration-300">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-70 dark:opacity-40 pointer-events-none" />
+
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 ring-1 ring-primary/15 flex items-center justify-center mb-6">
+                  <MessageCircle className="w-6 h-6 text-primary" />
+                </div>
               <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
                 Natural Conversations
               </h3>
@@ -116,13 +130,18 @@ export default function Home() {
                 Unlike other chatbots, Sisimaro&apos;s responses are more natural,
                 playful, and friendly. Chat like you would with a real teammate.
               </p>
+              </div>
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/70 dark:bg-gray-900/60 backdrop-blur-xl p-8 transition-all duration-300">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-70 dark:opacity-40 pointer-events-none" />
+
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 ring-1 ring-primary/15 flex items-center justify-center mb-6">
+                  <Clock className="w-6 h-6 text-primary" />
+                </div>
               <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
                 Decision Memory
               </h3>
@@ -130,13 +149,18 @@ export default function Home() {
                 Recalls every decision, context, and outcome. Never lose track of
                 what was decided and why.
               </p>
+              </div>
             </div>
 
             {/* Feature 5 */}
-            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
-                <Lightbulb className="w-6 h-6 text-primary" />
-              </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/70 dark:bg-gray-900/60 backdrop-blur-xl p-8 transition-all duration-300">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-70 dark:opacity-40 pointer-events-none" />
+
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 ring-1 ring-primary/15 flex items-center justify-center mb-6">
+                  <Lightbulb className="w-6 h-6 text-primary" />
+                </div>
               <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
                 Smart Research
               </h3>
@@ -144,13 +168,18 @@ export default function Home() {
                 Brainstorm, research, or complete tasks—all in one place. No need
                 to juggle between other chatbots.
               </p>
+              </div>
             </div>
 
             {/* Feature 6 */}
-            <div className="bg-white dark:bg-gray-900/80 rounded-2xl p-8 border border-gray-200 dark:border-gray-700">
-              <div className="w-12 h-12 rounded-xl bg-primary-light flex items-center justify-center mb-6">
-                <ShieldCheck className="w-6 h-6 text-primary" />
-              </div>
+            <div className="group relative overflow-hidden rounded-2xl border border-gray-200/80 dark:border-white/10 bg-white/70 dark:bg-gray-900/60 backdrop-blur-xl p-8 transition-all duration-300">
+              <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-transparent opacity-60 pointer-events-none" />
+              <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl opacity-70 dark:opacity-40 pointer-events-none" />
+
+              <div className="relative">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 dark:bg-primary/10 ring-1 ring-primary/15 flex items-center justify-center mb-6">
+                  <ShieldCheck className="w-6 h-6 text-primary" />
+                </div>
               <h3 className="text-xl font-semibold font-heading text-gray-900 dark:text-white mb-3">
                 Enterprise-Grade
               </h3>
@@ -158,6 +187,7 @@ export default function Home() {
                 Playful vibes meet serious security. Built for scale with the
                 reliability your business demands.
               </p>
+              </div>
             </div>
           </div>
         </div>

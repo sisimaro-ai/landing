@@ -24,10 +24,10 @@ export default function Footer() {
               Terms
             </a>
             <a
-              href="mailto:hello@sisimaro.com"
+              href="mailto:founders@sisimaro.com"
               className="hover:text-gray-900 dark:hover:text-white transition-colors"
             >
-              Contact
+              Contact Us
             </a>
           </div>
 
