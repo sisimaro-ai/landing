@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Sun, Moon } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
-    // Check for saved theme or system preference
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
     const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
@@ -42,7 +42,7 @@ export default function Navbar() {
     >
       <div className="bg-white/40 dark:bg-white/5 backdrop-blur-2xl backdrop-saturate-150 border border-gray-200/80 dark:border-white/10 rounded-2xl px-6 py-3 flex items-center justify-between dark:shadow-black/30">
         <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
+          <Link href="/" className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity">
             <Image
               src="/short-logo.png"
               alt="Sisimaro logo"
@@ -50,7 +50,7 @@ export default function Navbar() {
               height={30}
             />
             <span className="text-3xl hidden md:block font-bold font-heading text-primary transition-colors -tracking-[0.04em]">Sisimaro</span>
-          </div>
+          </Link>
           <div className="hidden md:flex items-center gap-6">
             <a
               href="#features"
